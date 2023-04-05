@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes">
+    <link rel="stylesheet" href="./main.css">
+    <title>FEキャラクタークイズ</title>
+</head>
+<body>
+    <section id="modalArea" class="modalArea">
+        <div id="modalBg" class="modalBg"></div>
+        <div class="modalWrapper">
+            <div class="modalContents">
+            <h1>お疲れ様でした！</h1>
+            <p id="result"></p>
+            <p>twitterで結果を共有しますか？</p>
+            <a class="share shareTwitter" id="shareModal" onclick="share()" href="" target="_blank">
+                <img class="img" src="https://all-pokemon-ierukana.com/img/system/logo_twitter.png" alt="">
+                <span class="shareText">twitterで結果を共有</span>
+            </a>
+            </div>
+        </div>
+    </section>
+    <div id="top">
+        <h1>FEキャラクタークイズ</h1>
+        <div id="selector"></div>
+        <div class="container">
+            <input id="text" type="text">
+            <div class="count">
+                <span id="correct"></span>
+                <span>/</span>
+                <span id="all"></span>
+            </div>
+        </div>
+        <div id="buttons" class="container">
+            <button id="timer" onclick="timer_stop()" disabled>一時停止</button>
+            <button id="viewAnswer" onclick="finish()">答えを見る</button>
+            <p id="judge"></p>
+        </div>
+    </div>
+    <div id="share" class="container">
+        <a class="share shareTwitter" id="twitter" onclick="share()" href="" target="_blank">
+            <img class="img" src="https://all-pokemon-ierukana.com/img/system/logo_twitter.png" alt="">
+            <span class="shareText">twitterで結果を共有</span>
+        </a>
+    </div>
+    <div class="container">
+        <p class="timer" id="hour">0</p>
+        <p class="timer">時間</p>
+        <p class="timer" id="min">0</p>
+        <p class="timer">分</p>
+        <p class="timer" id="sec">0</p>
+        <p class="timer">秒</p>
+    </div>
+    <div id="main"></div>
+    <input type="checkbox" id="mute" onclick="audio()" checked>
+    <label for="mute">効果音</label>
+    <input id="volume" type="range" value="0.5" max="1" step="0.01">
+    <p style="font-size: 15px;text-align: center;margin: 0;">このサイトはファイアーエムブレムの非公式2次創作作品です。</p>
+    <div id="footer">
+        <p>デザインやレイアウトなどについてのご意見・ご感想は<a href="https://twitter.com/sinononomeda" target="_blank" rel="noopener noreferrer">こちら</a>まで。</p>
+        <p>機能についてのご意見・ご感想は<a href="https://twitter.com/papapa621" target="_blank" rel="noopener noreferrer">こちら</a>まで。</p>
+    </div>
+    <audio id="correctAudio">
+        <source src="./audio/correct.mp3" type="audio/mp3">
+    </audio>
+    <audio id="falseAudio">
+        <source src="./audio/false.mp3" type="audio/mp3">
+    </audio>
+    <script src="FE_Characters.js"></script>
+    <script src="scripts/load.js"></script>
+    <script src="scripts/draw.js"></script>
+    <script src="scripts/finish.js"></script>
+    <script src="scripts/retry.js"></script>
+    <script src="scripts/ans.js"></script>
+    <script src="scripts/timer.js"></script>
+    <script src="scripts/share.js"></script>
+    <script src="scripts/audio.js"></script>
+</body>
+</html>
