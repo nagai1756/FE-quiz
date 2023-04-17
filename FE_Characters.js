@@ -1708,16 +1708,16 @@ const dataAll = [
     "name_ja8": ""
   },
   {
-    "name_ja": "イル",
+    "name_ja": "イル・ラファール",
     "img_src": "https://puarts.com/blog/images/FehCylPortraits/Iru_Engage.png",
     "title": "ファイアーエムブレム エンゲージ",
     "playable": "yes",
     "name_ja_href": "https://puarts.com/?fechar=1150",
     "name_ja2": "いる",
-    "name_ja3": "",
-    "name_ja4": "",
+    "name_ja3": "らふぁーる",
+    "name_ja4": "ラファール",
     "name_ja5": "nil",
-    "name_ja6": "",
+    "name_ja6": "イル",
     "name_ja7": "",
     "name_ja8": ""
   },
